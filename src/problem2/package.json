@@ -1,0 +1,17 @@
+{
+  "name": "problem2",
+  "version": "1.0.0",
+  "main": "script.js",
+  "scripts": {
+    "dev": "vite",
+    "build": "vite build",
+    "serve": "vite preview"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "description": "Ardiant Utomo",
+  "devDependencies": {
+    "vite": "^6.1.0"
+  }
+}
