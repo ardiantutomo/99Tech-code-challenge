@@ -10,16 +10,16 @@ I create a simple server that can create, read, update, and delete resources. I 
    npm install
    ```
 
-2. Generate Prisma client:
-
-   ```bash
-   npx prisma generate
-   ```
-
-3. Migrate the database:
+2. Migrate the database (if not migrated yet):
 
    ```bash
    npx prisma migrate dev
+   ```
+
+3. Generate Prisma client (if not generated yet):
+
+   ```bash
+   npx prisma generate
    ```
 
 4. Run the server:
