@@ -6,11 +6,20 @@
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
     "problem1": "node src/problem1/index.js",
-    "problem2": "cd src/problem2 && vite dev"
+    "problem2": "cd src/problem2 && vite dev",
+    "problem4": "ts-node src/problem4/index.ts",
+    "problem4-go": "cd src/problem4 && go run problem4.go"
   },
   "keywords": [],
   "license": "ISC",
   "dependencies": {
+    "console": "^0.7.2",
+    "ts": "^0.2.2",
+    "ts-node": "^10.9.2",
+    "typescript": "^5.7.3",
     "vite": "^6.1.0"
+  },
+  "devDependencies": {
+    "@types/node": "^22.13.4"
   }
 }
