@@ -19,10 +19,18 @@ export class ResourceService {
     id: number,
     data: { name?: string; value?: string; status?: string }
   ) {
+    const resource = await resourceRepository.findById(id);
+    if (!resource) {
+      throw new Error("Resource not found");
+    }
     return resourceRepository.update(id, data);
   }
 
   async deleteResource(id: number) {
+    const resource = await resourceRepository.findById(id);
+    if (!resource) {
+      throw new Error("Resource not found");
+    }
     return resourceRepository.delete(id);
   }
 }

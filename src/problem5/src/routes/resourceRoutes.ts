@@ -45,6 +45,8 @@ router.post("/", async (req, res) => {
  *     responses:
  *       200:
  *         description: A list of resources
+ *       404:
+ *         description: Resource not found
  */
 router.get("/", async (req, res) => {
   const { status } = req.query;
@@ -68,10 +70,18 @@ router.get("/", async (req, res) => {
  *     responses:
  *       200:
  *         description: Resource details
+ *       404:
+ *         description: Resource not found
  */
 router.get("/:id", async (req, res) => {
-  const resource = await resourceService.getResourceById(Number(req.params.id));
-  res.json(resource);
+  try {
+    const resource = await resourceService.getResourceById(
+      Number(req.params.id)
+    );
+    res.json(resource);
+  } catch (error) {
+    res.status(404).json({ message: "Resource not found" });
+  }
 });
 
 /**
@@ -99,13 +109,19 @@ router.get("/:id", async (req, res) => {
  *     responses:
  *       200:
  *         description: Resource updated successfully
+ *       404:
+ *         description: Resource not found
  */
 router.put("/:id", async (req, res) => {
-  const resource = await resourceService.updateResource(
-    Number(req.params.id),
-    req.body
-  );
-  res.json(resource);
+  try {
+    const resource = await resourceService.updateResource(
+      Number(req.params.id),
+      req.body
+    );
+    res.json(resource);
+  } catch (error) {
+    res.status(404).json({ message: "Resource not found" });
+  }
 });
 
 /**
@@ -122,10 +138,16 @@ router.put("/:id", async (req, res) => {
  *     responses:
  *       204:
  *         description: Resource deleted successfully
+ *       404:
+ *         description: Resource not found
  */
 router.delete("/:id", async (req, res) => {
-  await resourceService.deleteResource(Number(req.params.id));
-  res.status(204).send();
+  try {
+    await resourceService.deleteResource(Number(req.params.id));
+    res.status(204).json({ message: "Resource deleted successfully" });
+  } catch (error) {
+    res.status(404).json({ message: "Resource not found" });
+  }
 });
 
 export default router;
