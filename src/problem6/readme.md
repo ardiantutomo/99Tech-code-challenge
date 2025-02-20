@@ -31,4 +31,4 @@ This module is responsible for handling score updates for a scoreboard on a webs
 
 ## Diagram
 
-![Architecture Diagram](https://github.com/ardiantutomo/99Tech-code-challenge/blob/main/src/problem6/architecture.png)
+![Architecture Diagram](https://raw.githubusercontent.com/ardiantutomo/99Tech-code-challenge/refs/heads/master/src/problem6/scoreboard_update_flow.png)
