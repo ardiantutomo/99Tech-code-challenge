@@ -2,6 +2,7 @@
 
 I use Node.js to run the code.
 
+- `npm i` to install dependency required
 - `npm run problem1` to run the code for problem 1.
 - `npm run problem2` to run the code for problem 2.
 - `npm run problem3` to run the code for problem 3.
