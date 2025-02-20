@@ -2,7 +2,7 @@ Link: https://s5tech.notion.site/Problem-2-Fancy-Form-033865bc7c98401296f1caa748
 
 ## Note
 
-I created this project using Vite. and beautify the UI
+I created this project using Vite and beautify the UI
 
 Steps to run the project:
 
